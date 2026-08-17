@@ -2,8 +2,9 @@ import { createElement, $ } from '../../utils/dom.js';
 import { t } from '../../i18n/index.js';
 
 const EMOJI_OPTIONS = [
-  '😀', '😎', '🤓', '🦊', '🐺', '🦁', '🐸', '🐵',
-  '🔥', '⚡', '🌟', '🎯', '💪', '🏆', '🎲', '🍀',
+  '😀', '😎', '🤓', '🦊', '🐺', '🦁',
+  '🐸', '🐵', '🔥', '⚡', '🌟', '🎯',
+  '💪', '🏆', '🎲', '🍀', '🌊', '🐉',
 ];
 
 export function showPlayerDialog(currentName = '', currentEmoji = '') {
