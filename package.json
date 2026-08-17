@@ -1,0 +1,30 @@
+{
+  "name": "bolos-galegos",
+  "version": "1.0.0",
+  "description": "Aplicación para gestionar partidas de Bolos Galegos (reglas de Mölkky)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "keywords": [
+    "molkky",
+    "bolos",
+    "galegos",
+    "juego",
+    "pwa"
+  ],
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "vite": "^8.2.1",
+    "vite-plugin-pwa": "^1.3.0",
+    "vitest": "^4.1.10"
+  },
+  "dependencies": {
+    "html2canvas": "^1.4.1"
+  }
+}
