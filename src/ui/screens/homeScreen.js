@@ -3,6 +3,7 @@ import { navigate } from '../../app/router.js';
 import { getActiveGame } from '../../storage/gamesRepository.js';
 import { dbClearAll } from '../../storage/database.js';
 import { t, AVAILABLE_LANGUAGES, getLanguage, setLanguage } from '../../i18n/index.js';
+import { asset } from '../../utils/assets.js';
 import { isSoundEnabled, setSoundEnabled } from '../../utils/sound.js';
 import { clearActiveGame } from '../../app/state.js';
 
@@ -17,7 +18,7 @@ export async function renderHomeScreen() {
   // Logo
   const logoArea = createElement('div', { className: 'home-logo-area' });
   logoArea.appendChild(createElement('img', {
-    src: '/logo.png',
+    src: asset('logo.png'),
     alt: t('appName'),
     className: 'home-logo-img',
   }));
@@ -102,7 +103,7 @@ function renderLanguageSelector() {
       dropdown.classList.toggle('lang-dropdown-open');
     },
   }, [
-    createElement('img', { src: `/flags/${currentInfo.flag}.svg`, className: 'lang-flag-img', alt: currentInfo.label }),
+    createElement('img', { src: asset(`flags/${currentInfo.flag}.svg`), className: 'lang-flag-img', alt: currentInfo.label }),
     createElement('span', { className: 'lang-label', textContent: currentInfo.label }),
     createElement('span', { className: 'lang-arrow', textContent: '▾' }),
   ]);
@@ -120,7 +121,7 @@ function renderLanguageSelector() {
         renderHomeScreen();
       },
     }, [
-      createElement('img', { src: `/flags/${lang.flag}.svg`, className: 'lang-flag-img', alt: lang.label }),
+      createElement('img', { src: asset(`flags/${lang.flag}.svg`), className: 'lang-flag-img', alt: lang.label }),
       createElement('span', { className: 'lang-label', textContent: lang.label }),
       !lang.enabled ? createElement('span', { className: 'lang-soon', textContent: 'Proximamente' }) : null,
     ].filter(Boolean));

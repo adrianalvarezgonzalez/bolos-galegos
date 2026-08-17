@@ -5,12 +5,13 @@ import { saveGame } from '../../storage/gamesRepository.js';
 import { createGame, undoLastThrow } from '../../game/gameEngine.js';
 import { t } from '../../i18n/index.js';
 import { playVictory } from '../../utils/sound.js';
+import { asset } from '../../utils/assets.js';
 
 const STICKER_COUNT = 5;
 
 function getRandomSticker() {
   const index = Math.floor(Math.random() * STICKER_COUNT) + 1;
-  return `/stickers/${index}.svg`;
+  return asset(`stickers/${index}.svg`);
 }
 
 export function renderVictoryScreen() {
